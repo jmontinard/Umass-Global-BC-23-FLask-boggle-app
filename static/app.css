@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Corben', cursive;
+}
+body{
+    background-color: #33333311;
+
+}
+
+/*  */
+
+#boggle-contianer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid rgb(99, 99, 102)
+}
+
+
+
+.boggle-letter-container{
+    border: 2px solid white;
+    border-radius: 20%;
+    padding: 30px;
+    width: 85px;
+    height: 40px;
+
+}

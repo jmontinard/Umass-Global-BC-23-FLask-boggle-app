@@ -1,0 +1,48 @@
+{% extends 'base.html'  %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to Vintage Boogle</h1>
+<h3>gonna add some instruc text</h3>
+
+
+    <div id="boggle">
+        <table class="board">
+            <tbody id="boggle-contianer">
+                {% for letterRow in board %}
+                <tr class="letter-row">
+                    {% for letter in letterRow %}
+                    <td class="boggle-letter-container">{{ letter }}</td>
+                    {% endfor %}
+                </tr>
+                {%endfor%}
+                
+            </tbody>
+    </table>
+    <p>High Score: 
+        <b>{{ highscore }}</b> 
+        in {{ nplays }} plays
+      </p>
+
+      <p>
+        Score: <b class="score">0</b>
+        Seconds Left: <b class="timer"></b>
+      </p>
+
+    <form class="addWord" method="POST">
+        <input name="word" class="word" autofocus>
+        <button>Enter</button>
+        
+    </form>
+    <p class="msg">
+        <!-- msg we get that collerlates with what happens when we input a word -->
+      </p>
+
+    <ul class="words">
+        <!-- a ul list for all of our words we picked -->   
+      </ul>
+</div>
+    
+    
+    {% endblock %}
